@@ -136,3 +136,9 @@ resource "aws_network_acl_association" "myntra-web-nacl-asc" {
   subnet_id      = aws_subnet.myntra-web-sn.id
 }
 
+# Database NACL Association
+resource "aws_network_acl_association" "myntra-db-nacl-asc" {
+  network_acl_id = aws_network_acl.myntra-db-nacl.id
+  subnet_id      = aws_subnet.myntra-db-sn.id
+}
+
