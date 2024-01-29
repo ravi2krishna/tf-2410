@@ -55,3 +55,11 @@ resource "aws_route_table" "myntra-web-rt" {
   }
 }
 
+# Database Route Table
+resource "aws_route_table" "myntra-database-rt" {
+  vpc_id = aws_vpc.myntra-vpc.id
+
+  tags = {
+    Name = "myntra-database-route-table"
+  }
+}
